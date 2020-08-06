@@ -77,19 +77,19 @@ int main (int argc, char ** argv){
 
 	//Multi-point evaluations and interpolation.
 	double t1,t2,dt;
-	//fprintf(f,"%lu		", fmpz_get_ui(p));
+	fprintf(f,"%lu		", fmpz_get_ui(p));
 
 	t1 = clock();
 	multipoint_evaluation_LCH_polynomial_optimized(ctx, basis, perfect_binary_tree, coefficients, j, p_ulong);			
 	t2 = clock();
 	dt = (double)((t2 - t1) / CLOCKS_PER_SEC);
-	//fprintf(f,"%f 	", dt);
+	fprintf(f,"%f 	", dt);
 
 	t1 = clock();
 	multipoint_evaluation_LCH_polynomial_suboptimal(ctx, basis, perfect_binary_tree, coefficients,j, p_ulong);
 	t2 = clock();
 	dt = (double)((t2 - t1) / CLOCKS_PER_SEC);
-	//fprintf(f,"%f 	", dt);
+	fprintf(f,"%f 	", dt);
 			
 	//Generate the linearized polynomials for the original evaluation
 	fq_nmod_poly_t L[j];
@@ -101,7 +101,7 @@ int main (int argc, char ** argv){
 	original_evaluation_LCH_polynomial(ctx, basis, L, coefficients, j, p_ulong);			
 	t2 = clock();
 	dt = (double)((t2 - t1) / CLOCKS_PER_SEC);
-	//fprintf(f,"%f 	\n", dt);
+	fprintf(f,"%f 	\n", dt);
 					
 	multipoint_interpolation_LCH_polynomial_optimized(ctx, basis, perfect_binary_tree,coefficients, j, p_ulong);
 			
