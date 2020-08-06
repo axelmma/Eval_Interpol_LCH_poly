@@ -17,7 +17,7 @@ int main (int argc, char ** argv){
 
 	FILE * f;
 	char file[128] = "";
-	sprintf(file,"Multi-point_LCH (r = %d).txt", r);
+	sprintf(file,"Multi-point_LCH_r_%d.dat", r);
 	f = fopen (file,"a+");
 
 	unsigned long seed1 = 1, 
