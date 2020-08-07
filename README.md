@@ -5,15 +5,16 @@ ISSAC '20: Proceedings of the 45th International Symposium on Symbolic and Algeb
 
 
 
-# Multipoint evaluations (three algorithms) :
+# Algorithms for multipoint evaluations :
 
 * With higher memory locality of reference
 * With lower memory locality of reference (referred to as suboptimal in the program)
 * Following the original approach as in [LAHC16].
 
-# Multipoint interpolation : 
+# Algorithm for multipoint interpolation : 
 * With higher memory locality of reference
 
+# Subroutines :
 Our algorithms are based on the subroutines for fast standard multipoint evaluation and interpolation of standard polynomials over finite fields of characteristic p.
 They can be found in Ch.10 of [GG03].
 Also, higher memory locality of reference is achieved by performing perfect shuffles as in [YEMR13]. 
